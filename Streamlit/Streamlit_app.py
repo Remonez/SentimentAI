@@ -4,8 +4,13 @@ import pandas as pd
 
 # Load the model and vectorizer
 try:
-    rf_model = joblib.load('models/rf_model_sqrt.joblib')
-    tfidf_vectorizer = joblib.load('models/tfidf_vectorizer.joblib')
+    model_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models', 'rf_model_sqrt.joblib')
+    model_path2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models', 'tfidf_vectorizer.joblib')
+
+    rf_model = joblib.load(model_path)
+    tfidf_vectorizer = joblib.load(model_path2)
+    #rf_model = joblib.load('models/rf_model_sqrt.joblib')
+    #tfidf_vectorizer = joblib.load('models/tfidf_vectorizer.joblib')
 except Exception as e:
     st.error(f"⚠️ Failed to load the model or vectorizer: {e}")
     st.stop()
