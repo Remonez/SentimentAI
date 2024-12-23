@@ -1,5 +1,6 @@
-<p align="center" style="font-size:60px; font-weight:bold;">SentimentAI</p>
-
+<div align="center">
+  <h1 style="font-size: 45px;"><b><i>SentimentAI</i></b></h1>
+</div>
 
 
 # ***Interactive Customer Feedback Sentiment Predictor***
